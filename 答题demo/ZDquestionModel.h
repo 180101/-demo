@@ -14,14 +14,14 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *answer;
 @property (nonatomic, copy) NSString *title;
 @property (nonatomic, copy) NSString *icon;
-@property (nonatomic, strong) NSArray *option;
-
+@property (nonatomic, strong) NSArray *options;
+@property (nonatomic, strong) UIImage *image;
 /** 用字典实例化对象的成员方法 */
 - (instancetype)initWithDict:(NSDictionary *)dict;
 
 /** 用字典实例化对象的类方法,又称为工厂方法 */
 + (instancetype)questionWithDict:(NSDictionary *)dict;
-
++ (NSArray *)getArrFromPlist;
 @end
 
 NS_ASSUME_NONNULL_END

@@ -9,25 +9,24 @@
 #import "ViewController.h"
 #import "ZDquestionModel.h"
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *noLabel;
+@property (weak, nonatomic) IBOutlet UILabel *titleLabel;
+
 @property (weak, nonatomic) IBOutlet UIButton *centerBtn;//中间大图
 @property (strong, nonatomic) UIButton *matteBtn;//蒙版
 @property (strong, nonatomic) NSArray *questsArr;//题目列表
+@property (assign, nonatomic) int qIndex;
+@property (weak, nonatomic) IBOutlet UIButton *nextButton;//下一题
 @end
 
 @implementation ViewController
 - (NSArray *)questsArr{
     if (!_questsArr) {
-        NSArray *arr = [NSArray arrayWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"questions.plist" ofType:nil]];
-        NSMutableArray *arrM = [NSMutableArray array];
-        for (NSDictionary *dict in arr) {
-            [arrM addObject:[ZDquestionModel questionWithDict:dict]];
-        }
-        _questsArr = arrM;
+        _questsArr = [ZDquestionModel getArrFromPlist];
     }
     return  _questsArr;
 }
-
-
 
 /** 修改状态栏 */
 
@@ -46,7 +45,7 @@
     }
     return _matteBtn;
 }
-
+/** 放大图片 */
 - (IBAction)bigImgBtn{
     //1.增加蒙版
     if (self.matteBtn.alpha == 0.0) {
@@ -68,11 +67,35 @@
     }
 }
 
+/** 下一题 */
+- (IBAction)nextQuest {
+    //1、题目索引递增
+    self.qIndex++;
+    //2、取出索引对应的题目模型
+    ZDquestionModel *qModel = self.questsArr[self.qIndex];
+    //3、设置基本信息
+    self.noLabel.text = [NSString stringWithFormat:@"%d/%lu",self.qIndex + 1,self.questsArr.count];
+    self.titleLabel.text = qModel.title;
+    [self.centerBtn setImage:qModel.image forState:UIControlStateNormal];
+    //最后一题不能点
+    self.nextButton.enabled = (self.qIndex != self.questsArr.count - 1);
+    //4、创建答案按钮
+    
+    
+    //5、创建备选答案按钮
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.qIndex = -1;
+    [self nextQuest];
     
-    
+//    [self questsArr];
+//    for (ZDquestionModel *qModel in self.questsArr) {
+//        NSLog(@"%@",qModel);
+//    }
     
 }
 @end

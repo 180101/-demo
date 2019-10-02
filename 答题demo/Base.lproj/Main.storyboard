@@ -64,6 +64,9 @@
                                 <rect key="frame" x="324" y="293" width="90" height="45"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="下一题" backgroundImage="btn_right"/>
+                                <connections>
+                                    <action selector="nextQuest" destination="BYZ-38-t0r" eventType="touchUpInside" id="xAk-ws-lkD"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" adjustsImageWhenHighlighted="NO" lineBreakMode="middleTruncation" id="Vor-M0-6Wj">
                                 <rect key="frame" x="287" y="113" width="118" height="20"/>
@@ -77,6 +80,9 @@
                     </view>
                     <connections>
                         <outlet property="centerBtn" destination="Vc8-Y9-5zd" id="ezQ-NM-1Df"/>
+                        <outlet property="nextButton" destination="2p1-JW-RxT" id="iOU-F8-8cL"/>
+                        <outlet property="noLabel" destination="dff-Ti-lxH" id="Uru-iz-Llm"/>
+                        <outlet property="titleLabel" destination="jUH-FQ-7Oy" id="aUw-t9-dIx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

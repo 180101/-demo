@@ -18,6 +18,7 @@
 		691251B82343B69E000283E7 /* __demoUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 691251B72343B69E000283E7 /* __demoUITests.m */; };
 		6915389F2344896F00D3172A /* questions.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6915389E2344896F00D3172A /* questions.plist */; };
 		691538A223448B4600D3172A /* ZDquestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 691538A123448B4600D3172A /* ZDquestionModel.m */; };
+		691538A52344AA8C00D3172A /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 691538A42344AA8C00D3172A /* NSArray+Log.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,8 @@
 		6915389E2344896F00D3172A /* questions.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = questions.plist; sourceTree = "<group>"; };
 		691538A023448B4600D3172A /* ZDquestionModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDquestionModel.h; sourceTree = "<group>"; };
 		691538A123448B4600D3172A /* ZDquestionModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDquestionModel.m; sourceTree = "<group>"; };
+		691538A32344AA8C00D3172A /* NSArray+Log.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "NSArray+Log.h"; sourceTree = "<group>"; };
+		691538A42344AA8C00D3172A /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				691251972343B69D000283E7 /* ViewController.m */,
 				691538A023448B4600D3172A /* ZDquestionModel.h */,
 				691538A123448B4600D3172A /* ZDquestionModel.m */,
+				691538A32344AA8C00D3172A /* NSArray+Log.h */,
+				691538A42344AA8C00D3172A /* NSArray+Log.m */,
 				691251992343B69D000283E7 /* Main.storyboard */,
 				6912519C2343B69E000283E7 /* Assets.xcassets */,
 				6912519E2343B69E000283E7 /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				691538A223448B4600D3172A /* ZDquestionModel.m in Sources */,
 				691251982343B69D000283E7 /* ViewController.m in Sources */,
 				691251922343B69D000283E7 /* AppDelegate.m in Sources */,
+				691538A52344AA8C00D3172A /* NSArray+Log.m in Sources */,
 				691251A32343B69E000283E7 /* main.m in Sources */,
 				691251952343B69D000283E7 /* SceneDelegate.m in Sources */,
 			);
