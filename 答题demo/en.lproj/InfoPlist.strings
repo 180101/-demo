@@ -1,0 +1,9 @@
+/* 
+  InfoPlist.strings
+  答题demo
+
+  Created by Jude Leslie on 2019/10/4.
+  Copyright © 2019 Jude Leslie. All rights reserved.
+*/
+
+CFBundleDisplayName = "picture crazy guess";
