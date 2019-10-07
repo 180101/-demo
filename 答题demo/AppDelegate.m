@@ -7,8 +7,10 @@
 //
 #define RGBMAIN    [UIColor colorWithRed:(71 / 255.0) green:(134 / 255.0) blue:(247 / 255.0) alpha:1]//主颜色
 #define ResizableImageDataForMode(image,top,left,bottom,right,mode) [image resizableImageWithCapInsets:UIEdgeInsetsMake(top,left,bottom,right) resizingMode:mode]
+
 #import "AppDelegate.h"
 #import "UIImage+Radius.h"
+
 @interface AppDelegate ()
 
 @end
@@ -75,6 +77,19 @@
     [navigationBarAppearance setBackgroundImage:backgroundImage
                                   forBarMetrics:UIBarMetricsDefault];
     [navigationBarAppearance setTitleTextAttributes:textAttributes];
+}
+
+/** 禁止屏幕旋转 */
+- (UIInterfaceOrientationMask)application:(UIApplication *)application supportedInterfaceOrientationsForWindow:(nullable UIWindow *)window {
+    return UIInterfaceOrientationMaskPortrait;
+}
+
+- (BOOL)shouldAutorotate{
+    return NO;
+}
+ 
+- (UIInterfaceOrientationMask)supportedInterfaceOrientations{
+    return UIInterfaceOrientationMaskPortrait;
 }
 
 @end

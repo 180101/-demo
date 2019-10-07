@@ -12,28 +12,48 @@
 #define KScrnH [[UIScreen mainScreen] bounds].size.height
 #define KScrnW [[UIScreen mainScreen] bounds].size.width
 
-@interface ZDWebViewController ()
-
+@interface ZDWebViewController ()<UIScrollViewDelegate>
+@property (strong, nonatomic) UIScrollView *scroView;;
+@property (strong, nonatomic) WKWebView *webView;
 @end
 
 @implementation ZDWebViewController
-
+- (WKWebView *)webView{
+    if (!_webView) {
+        _webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, KScrnW, KScrnH)];
+        NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
+        [_webView loadRequest:request];
+        [_webView goBack];
+        [_webView goForward];
+        [_webView reload];
+        [self.view addSubview:_webView];
+    }
+    return _webView;
+}
 - (void)viewDidLoad {
     [super viewDidLoad];
-    WKWebView *webView = [[WKWebView alloc]initWithFrame:CGRectMake(0, 0, KScrnW, KScrnH)];
-    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:@"https://www.baidu.com"]];
-    [webView loadRequest:request];
-    [webView goBack];
-    [webView goForward];
-    [webView reload];
+    [self webView];
+    self.scroView.delegate = self;
+    if ([self.scroView.delegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [self.scroView.delegate scrollViewDidScroll:self.scroView];
+    }
     NSLog(@"===跳转成功");
-    
-    [self.view addSubview:webView];
     return;
     
     // Do any additional setup after loading the view.
 }
 
+//- (void)scrollViewDidScroll:(UIScrollView *)scrollView{
+//    NSLog(@"滑动了");
+//}
+
+- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType{
+    if (request) {
+        return YES;
+    }else{
+        return NO;        
+    }
+}
 /*
 #pragma mark - Navigation
 

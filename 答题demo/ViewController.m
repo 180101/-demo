@@ -37,7 +37,8 @@
 #define KTarbarH  (kDevice_Is_iPhoneXAll ? 44 : 20)
 #define kBottom self.view.safeAreaInsets.bottom
 
-@interface ViewController ()
+@interface ViewController ()<UIScrollViewDelegate>
+@property (strong, nonatomic) UIScrollView *scroView;
 @property (strong, nonatomic) UIImageView *backView;        //背景视图
 @property (strong, nonatomic) UILabel *pageLabel;  //页数文本框
 @property (strong, nonatomic) UILabel *titleLabel; //标题文本框
@@ -562,6 +563,14 @@
     self.iconArr = @[@"icon_tip",@"icon_help",@"icon_img"];
     self.sideArr = @[@"btn_left",@"btn_right"];
     [self nextQuest];
+    self.scroView.delegate = self;
+    if ([self.scroView.delegate respondsToSelector:@selector(scrollViewDidScroll:)]) {
+        [self.scroView.delegate scrollViewDidScroll:self.scroView];
+    }
     return;
+}
+
+-(void)scrollViewDidScroll:(UIScrollView *)scrollView{
+    NSLog(@"滑动完成");
 }
 @end
