@@ -20,6 +20,7 @@
 		691538A223448B4600D3172A /* ZDquestionModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 691538A123448B4600D3172A /* ZDquestionModel.m */; };
 		691538A52344AA8C00D3172A /* NSArray+Log.m in Sources */ = {isa = PBXBuildFile; fileRef = 691538A42344AA8C00D3172A /* NSArray+Log.m */; };
 		691538AB23451D1900D3172A /* UIImage+Radius.m in Sources */ = {isa = PBXBuildFile; fileRef = 691538AA23451D1900D3172A /* UIImage+Radius.m */; };
+		696DFB92234B63390034DD34 /* GitHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 696DFB91234B63390034DD34 /* GitHelper.m */; };
 		699844CF23471424004120AC /* ZDWebViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 699844CE23471424004120AC /* ZDWebViewController.m */; };
 		699844D823472F31004120AC /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 699844DA23472F31004120AC /* InfoPlist.strings */; };
 /* End PBXBuildFile section */
@@ -67,6 +68,8 @@
 		691538A42344AA8C00D3172A /* NSArray+Log.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Log.m"; sourceTree = "<group>"; };
 		691538A923451D1900D3172A /* UIImage+Radius.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+Radius.h"; sourceTree = "<group>"; };
 		691538AA23451D1900D3172A /* UIImage+Radius.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Radius.m"; sourceTree = "<group>"; };
+		696DFB90234B63390034DD34 /* GitHelper.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GitHelper.h; sourceTree = "<group>"; };
+		696DFB91234B63390034DD34 /* GitHelper.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = GitHelper.m; sourceTree = "<group>"; };
 		699844CD23471424004120AC /* ZDWebViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ZDWebViewController.h; sourceTree = "<group>"; };
 		699844CE23471424004120AC /* ZDWebViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ZDWebViewController.m; sourceTree = "<group>"; };
 		699844D023472CFE004120AC /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 				691251942343B69D000283E7 /* SceneDelegate.m */,
 				691251962343B69D000283E7 /* ViewController.h */,
 				691251972343B69D000283E7 /* ViewController.m */,
+				696DFB90234B63390034DD34 /* GitHelper.h */,
+				696DFB91234B63390034DD34 /* GitHelper.m */,
 				699844CD23471424004120AC /* ZDWebViewController.h */,
 				699844CE23471424004120AC /* ZDWebViewController.m */,
 				691538A023448B4600D3172A /* ZDquestionModel.h */,
@@ -307,6 +312,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				696DFB92234B63390034DD34 /* GitHelper.m in Sources */,
 				691538AB23451D1900D3172A /* UIImage+Radius.m in Sources */,
 				691538A223448B4600D3172A /* ZDquestionModel.m in Sources */,
 				691251982343B69D000283E7 /* ViewController.m in Sources */,
